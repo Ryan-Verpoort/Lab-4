@@ -11,7 +11,7 @@ public:
     DataPoints generateSamples(const Sinusoid& sine_wave, const Range& range) const;
 
 private:
-    static const int TOTAL_POINTS = 1000;
+    static const int TOTAL_POINTS = 2000;
 };
 
 // standalone function for generating data points, a default uniform sampler is provided
