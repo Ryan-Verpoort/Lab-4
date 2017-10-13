@@ -69,3 +69,10 @@ int main()
 }
 
 // Smooth Graphs are not produced since the sample rate is too low set to 50
+
+/*
+Other Types of graphs could be drawn such as polar co-ordinates, log graphs and functions were y is of polynomial form
+the implemntation will be similar to that of the absolute function also direvative functions could be added
+The axes limits and drawing them would come from the minimum and maximum points if they lie between then drawn using
+Display
+*/
