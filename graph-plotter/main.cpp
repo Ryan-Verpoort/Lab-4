@@ -9,6 +9,7 @@
 #include "Function.h"
 #include "Exponential.h"
 #include "Polynomial.h"
+#include "Absolute.h"
 #include <memory>
 
 using std::shared_ptr;
@@ -54,7 +55,15 @@ int main()
 
     Range FunctionRange{ -3, 1.5 };
     graph.plot(generateDataPoints(poly, FunctionRange), solid_red);
-    graph.plot(generateDataPoints(exp, FunctionRange), solid_red);
+    graph.plot(generateDataPoints(exp, FunctionRange), solid_blue);
+
+    // Polynomial x^2 - 3x - 4
+    vector<float> Coeffs_Abs = { 1.0, -3.0, -4.0 };
+    shared_ptr<Polynomial> poly_Abs = make_shared<Polynomial>(Coeffs_Abs);
+    Absolute Absolute_Polynomial(poly_Abs);
+
+    Range Range_Abs{ -4, 7 };
+    graph.plot(generateDataPoints(Absolute_Polynomial, Range_Abs), solid_red);
 
     return 0;
 }
