@@ -76,3 +76,8 @@ the implemntation will be similar to that of the absolute function also direvati
 The axes limits and drawing them would come from the minimum and maximum points if they lie between then drawn using
 Display
 */
+
+/*
+A Vector of Graph objects and ther details could be created which is then passed into the plot function
+This should allow multiple graphs to be plot on the same Axis
+*/
