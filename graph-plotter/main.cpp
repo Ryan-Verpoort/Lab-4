@@ -6,6 +6,9 @@
 #include "DashLineStyle.h"
 #include "DotLineStyle.h"
 #include "Points.h"
+#include "Function.h"
+#include "Exponential.h"
+#include "Polynomial.h"
 #include <memory>
 
 using std::shared_ptr;
@@ -41,6 +44,17 @@ int main()
 
     DotLineStyle dot_blue{ Colour::Blue, display };
     graph.plot(generateDataPoints(cosine_function, range), dot_blue);
+
+    // Exponential e^1.5x
+    Exponential exp{ 1.0, 1.5 };
+
+    // Polynomil x^2 + 2x + 1
+    vector<float> Coeffs = { 1.0, 2.0, 1.0 };
+    Polynomial poly{ Coeffs };
+
+    Range FunctionRange{ -3, 1.5 };
+    graph.plot(generateDataPoints(poly, FunctionRange), solid_red);
+    graph.plot(generateDataPoints(exp, FunctionRange), solid_red);
 
     return 0;
 }
